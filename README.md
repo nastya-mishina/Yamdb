@@ -74,3 +74,5 @@ https://hub.docker.com/repository/docker/mishinaanast/yamdb
 - Uploading the image to DockerHub:
 ```$  docker push mishinaanast/yamdb_praktikum:v2.11.1989```
 
+###Workflow status:
+```https://github.com/nastya-mishina/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg```

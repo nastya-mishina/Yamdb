@@ -10,12 +10,15 @@ services:
     env_file:
       - ./.env
   web:
+    container_name: web
+    image: mishinaanast/yamdb.praktikum:latest
     build: .
     restart: always
     ports:
       - "8000:80"
     volumes:
       - static_value:/code/static/
+      - media_value:/code/media/
     depends_on:
       - db
     env_file:
