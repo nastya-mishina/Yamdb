@@ -11,6 +11,7 @@ services:
       - ./.env
   web:
     container_name: web
+    image: mishinaanast/yamdb.praktikum:latest
     build: .
     restart: always
     ports:
