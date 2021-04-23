@@ -56,9 +56,8 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull mishinaanast/yamdb.praktikum:latest
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 8000:80 mishinaanast/yamdb.praktikum:latest
+            sudo docker-compose exec -T web python manage.py migrate --noinput
+            sudo docker-compose exec -T web python manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
