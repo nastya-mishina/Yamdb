@@ -57,8 +57,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker pull mishinaanast/yamdb.praktikum:latest
-            sudo docker-compose stop
+            sudo docker stop $(sudo docker ps -a -q)
             sudo docker-compose up --build -d
+
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
