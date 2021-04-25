@@ -6,7 +6,11 @@ This project is a RESTful YaMDb API for interacting with the YaMDb service. The 
 
 The application image is available on Docker Hub:
 https://hub.docker.com/repository/docker/mishinaanast/yamdb
-​
+
+### Website address:
+http://178.154.214.43/
+
+
 ## Technologies:
 - Python 3.8.5
 - Django 3.0.5
@@ -15,7 +19,7 @@ https://hub.docker.com/repository/docker/mishinaanast/yamdb
 - PostgreSQL
 
 ## Features
-​
+
 - CRUD for titles
 - CRUD for reviews and comments
 - CRUD for genres and categories
