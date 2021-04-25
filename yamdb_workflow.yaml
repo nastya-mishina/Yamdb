@@ -59,6 +59,9 @@ jobs:
             sudo docker pull mishinaanast/yamdb.praktikum:latest
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker-compose up --build -d
+            sudo docker-compose exec -T web python manage.py makemigrations --no-input
+            sudo docker-compose exec -T web python manage.py migrate --no-input
+            sudo docker-compose exec -T web python manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
